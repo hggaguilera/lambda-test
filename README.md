@@ -88,3 +88,9 @@ After you submit the completed project, we will schedule a follow-up code-review
 | :------------------- | :--------------------------- |
 | `npm run format:fix` | format files with "prettier" |
 | `npm run test`       | execute tests with "jest"    |
+
+## Additional Info
+
+- run `npm install` to install all feature dependencies
+- run `npm run dev` to start a offline connection to the serverless API
+- enter [http://localhost:3000/dev](http://localhost:3000/dev) to see the full list of endpoints available

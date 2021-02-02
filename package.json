@@ -9,6 +9,7 @@
   "devDependencies": {
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
+    "serverless": "^2.22.0",
     "serverless-offline": "^6.8.0"
   },
   "dependencies": {
@@ -17,6 +18,7 @@
   },
   "scripts": {
     "format:fix": "prettier --write **/*.{js/ts/md}",
-    "test": "jest"
+    "test": "jest",
+    "dev": "serverless offline start --skipCacheInvalidation"
   }
 }

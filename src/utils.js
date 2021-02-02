@@ -1,5 +1,5 @@
 const getByZipCode = (dataset, zip) => {
-  Object.values(dataset).filter((data) => data.zip.includes(zip));
+  return Object.values(dataset).filter((data) => data.zip.startsWith(zip));
 };
 
 module.exports = { getByZipCode };

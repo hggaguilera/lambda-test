@@ -4,15 +4,14 @@ const app = express();
 const dataset = require('./data.json');
 const { getByZipCode } = require('./utils');
 
-app.get('/getByZipCode', (req, res) => {
-  const { zip } = req.body;
-  const sortedData = getByZipCode(dataset, zip);
-  res.send({ results: sortedData });
+app.get('/', (req, res) => {
+  res.send({});
 });
 
-// lambda-like handler function
-// module.exports.handler = async (event) => {
-//   // do stuff...
-// };
+app.get('/getByZipCode', (req, res) => {
+  const { zip } = req.query;
+  const sortedData = getByZipCode(dataset, zip.toString());
+  res.send({ results: sortedData });
+});
 
 module.exports.handler = serverless(app);
