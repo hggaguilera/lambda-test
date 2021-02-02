@@ -2,7 +2,7 @@ service: lambda-test
 
 provider:
   name: aws
-  runtime: nodejs12.0
+  runtime: nodejs6.10
   state: dev
   region: us-east-1
   memorySize: 128
@@ -11,14 +11,8 @@ functions:
   app:
     handler: src/index.handler
     events:
-      - http:
-          path: src/
-          method: ANY
-          cors: true
-      - http:
-          path: /{proxy+}
-          method: ANY
-          cors: true
+      - http: ANY /
+      - http: 'ANY {proxy+}'
 
 plugins:
   - serverless-offline

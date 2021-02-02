@@ -86,5 +86,5 @@ After you submit the completed project, we will schedule a follow-up code-review
 
 | command              | description                  |
 | :------------------- | :--------------------------- |
-| `yarn format:fix`    | format files with "prettier" |
-| `yarn test`          | execute tests with "jest"    |
+| `npm run format:fix` | format files with "prettier" |
+| `npm run test`       | execute tests with "jest"    |
