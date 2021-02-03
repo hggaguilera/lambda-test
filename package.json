@@ -1,7 +1,7 @@
 {
-  "name": "aura-challenge-zips",
+  "name": "lambda-challenge",
   "version": "0.0.0",
-  "main": "src/index.js",
+  "main": "src/lambda.js",
   "engines": {
     "node": ">=12.0.0",
     "npm": ">=6.0.0"
@@ -18,7 +18,7 @@
     "serverless-http": "^2.7.0"
   },
   "scripts": {
-    "format:fix": "prettier --write **/*.{js/ts/md}",
+    "format:fix": "prettier --write .",
     "test": "jest",
     "dev": "serverless offline start --skipCacheInvalidation"
   }

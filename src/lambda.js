@@ -1,20 +1,20 @@
-'use strict';
-const dataset = require('./data.json');
+"use strict";
+const dataset = require("./data.json");
 const {
   getLocationByZipCode,
   getLocationByCityName,
   getByNearestLocation,
   getLocationByAreCode,
   getLocationByStateAndTimezone,
-} = require('./utils');
+} = require("./utils");
 
-module.exports.hello = async event => {
+module.exports.hello = async (event) => {
   return {
     statusCode: 200,
     body: JSON.stringify(
       {
-        message: 'Hello World',
-        input: event
+        message: "Hello World",
+        input: event,
       },
       null,
       2
@@ -22,12 +22,12 @@ module.exports.hello = async event => {
   };
 };
 
-module.exports.getZipCode = async event => {
-  if(!event.queryStringParameters) {
+module.exports.getZipCode = async (event) => {
+  if (!event.queryStringParameters) {
     return {
       statusCode: 202,
-      body: JSON.stringify({ results: dataset }, null, 2)
-    }
+      body: JSON.stringify({ results: dataset }, null, 2),
+    };
   }
 
   const { zip } = event.queryStringParameters;
@@ -45,12 +45,12 @@ module.exports.getZipCode = async event => {
   };
 };
 
-module.exports.getCityName = async event => {
-  if(!event.queryStringParameters) {
+module.exports.getCityName = async (event) => {
+  if (!event.queryStringParameters) {
     return {
       statusCode: 202,
-      body: JSON.stringify({results: dataset}, null, 2)
-    }
+      body: JSON.stringify({ results: dataset }, null, 2),
+    };
   }
 
   const { city_name } = event.queryStringParameters;
@@ -66,4 +66,4 @@ module.exports.getCityName = async event => {
       2
     ),
   };
-}
+};

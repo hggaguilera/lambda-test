@@ -97,6 +97,7 @@ After you submit the completed project, we will schedule a follow-up code-review
 - all the endpoints are get request and uses query params to do the filtering
 
 ## Query params for each Endpoint
+
 - for `getByZipCode` use zip
 - for `getByCityName` use city_name
 - for `getNearestLocation` use lat and lng

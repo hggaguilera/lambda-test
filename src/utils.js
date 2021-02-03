@@ -1,5 +1,5 @@
-const geolib = require('geolib');
-const dataset = require('./data.json');
+const geolib = require("geolib");
+const dataset = require("./data.json");
 
 const distFromCurrent = (near, coord) => {
   return {
@@ -31,7 +31,9 @@ const getByNearestLocation = (location) => {
  * @return  {Array}
  */
 const getLocationByZipCode = (zip) => {
-  return Object.values(dataset).filter((data) => data.zip.startsWith(zip.toString()));
+  return Object.values(dataset).filter((data) =>
+    data.zip.startsWith(zip.toString())
+  );
 };
 
 /**
@@ -41,7 +43,9 @@ const getLocationByZipCode = (zip) => {
  * @return  {Array}
  */
 const getLocationByCityName = (name) => {
-  return Object.values(dataset).filter((data) => data.primary_city.startsWith(name));
+  return Object.values(dataset).filter((data) =>
+    data.primary_city.startsWith(name)
+  );
 };
 
 /**
@@ -63,7 +67,7 @@ const getLocationByAreCode = (areaCode) => {
  */
 const getLocationByStateAndTimezone = (state, timezone) => {
   return Object.values(dataset).filter(
-    (data) => data.state === state && data.timezone === timezone,
+    (data) => data.state === state && data.timezone === timezone
   );
 };
 

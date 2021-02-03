@@ -1,6 +1,6 @@
 service: lambda-test
 
-frameworkVersion: '2'
+frameworkVersion: "2"
 
 provider:
   name: aws
@@ -15,7 +15,7 @@ functions:
     handler: src/lambda.hello
     events:
       - http: ANY /
-      - http: 'ANY {proxy+}'
+      - http: "ANY {proxy+}"
   getZipCode:
     handler: src/lambda.getZipCode
     events:
