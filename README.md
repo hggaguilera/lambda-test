@@ -93,4 +93,4 @@ After you submit the completed project, we will schedule a follow-up code-review
 
 - run `npm install` to install all feature dependencies
 - run `npm run dev` to start a offline connection to the serverless API
-- enter [http://localhost:3000/dev](http://localhost:3000/dev) to see the full list of endpoints available
+- enter [http://localhost:3000/dev/endpoints](http://localhost:3000/dev/endpoints) to see the full list of endpoints available
