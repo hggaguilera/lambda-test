@@ -94,3 +94,11 @@ After you submit the completed project, we will schedule a follow-up code-review
 - run `npm install` to install all feature dependencies
 - run `npm run dev` to start a offline connection to the serverless API
 - enter [http://localhost:3000/dev/endpoints](http://localhost:3000/dev/endpoints) to see the full list of endpoints available
+- all the endpoints are get request and uses query params to do the filtering
+
+## Query params for each Endpoint
+- for `getByZipCode` use zip
+- for `getByCityName` use city_name
+- for `getNearestLocation` use lat and lng
+- for `getByAreaCode` use area_code
+- for `getByStateAndTimezone` use state and timezone

@@ -10,7 +10,15 @@ const {
 } = require('./utils');
 
 app.get('/endpoints', (req, res) => {
-  res.send({ endpoints: { byZipCode: '/getByZipCode', byCity: 'getByCityName' } });
+  res.send({
+    endpoints: {
+      byZipCode: '/getByZipCode',
+      byCity: 'getByCityName',
+      byNearLocation: 'getNearestLocation',
+      byAreaCode: 'getByAreaCode',
+      byStateAndTimezone: 'getByStateAndTimezone',
+    },
+  });
 });
 
 app.get('/getByZipCode', (req, res) => {
