@@ -31,7 +31,7 @@ const getByNearestLocation = (location) => {
  * @return  {Array}
  */
 const getLocationByZipCode = (zip) => {
-  return Object.values(dataset).filter((data) => data.zip.startsWith(zip));
+  return Object.values(dataset).filter((data) => data.zip.startsWith(zip.toString()));
 };
 
 /**

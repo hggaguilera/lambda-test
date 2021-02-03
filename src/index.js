@@ -23,7 +23,7 @@ app.get('/endpoints', (req, res) => {
 
 app.get('/getByZipCode', (req, res) => {
   const { zip } = req.query;
-  const response = getLocationByZipCode(+zip);
+  const response = getLocationByZipCode(zip);
   res.send({ results: response });
 });
 
