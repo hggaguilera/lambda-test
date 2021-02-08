@@ -11,11 +11,12 @@ provider:
   lambdaHashingVersion: 20201221
 
 functions:
-  hello:
-    handler: src/lambda.hello
+  endpoints:
+    handler: src/lambda.endpoints
     events:
-      - http: ANY /
-      - http: "ANY {proxy+}"
+      - http:
+          path: /endpoints
+          method: get
   getZipCode:
     handler: src/lambda.getZipCode
     events:
@@ -27,6 +28,24 @@ functions:
     events:
       - http:
           path: /getLocByCityName
+          method: get
+  getNearestLocation:
+    handler: src/lambda.getNearestLocation
+    events:
+      - http:
+          path: /getLocByNearestLocation
+          method: get
+  getAreaCode:
+    handler: src/lambda.getAreaCode
+    events:
+      - http:
+          path: /getLocByAreaCode
+          method: get
+  getTimezone:
+    handler: src/lambda.getTimezone
+    events:
+      - http:
+          path: /getLocByStateAndTimezone
           method: get
 
 plugins:

@@ -98,8 +98,8 @@ After you submit the completed project, we will schedule a follow-up code-review
 
 ## Query params for each Endpoint
 
-- for `getByZipCode` use zip
-- for `getByCityName` use city_name
-- for `getNearestLocation` use lat and lng
-- for `getByAreaCode` use area_code
-- for `getByStateAndTimezone` use state and timezone
+- for `getLocByZipCode` use zip
+- for `getLocByCityName` use city_name
+- for `getLocByNearestLocation` use lat and lng
+- for `getLocByAreaCode` use area_code
+- for `getLocByStateAndTimezone` use state and timezone
